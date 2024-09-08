@@ -25,6 +25,4 @@ public class ClientRequest {
     public void setRateLimitDuration(Long rateLimitDuration) {
         this.rateLimitDuration = rateLimitDuration;
     }
-
-    
 }
