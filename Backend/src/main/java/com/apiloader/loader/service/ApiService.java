@@ -41,7 +41,7 @@ public class ApiService {
     }
 
     // Get status code of response
-    public int forwardRequest(String baseURl, String className, String name, Map<String, Object> body) {
+    public int forwardRequest(String className, String name, Map<String, Object> body) {
         String url = className + "/" + name;
         RestClient.RequestBodySpec requestSpec = restClient.post()
                 .uri(url)
@@ -73,7 +73,7 @@ public class ApiService {
         }
     }
 
-    public Mono<ResponseEntity<String>> forwardRequestAll(List<ApiRequest> requests, String baseURL, Long rateLimitDuration, Long rateLimitSize)  {
+    public Mono<ResponseEntity<String>> forwardRequestAll(List<ApiRequest> requests, Long rateLimitDuration, Long rateLimitSize)  {
         return Mono.fromCallable(() -> {
             Map<String, Integer> results = new HashMap<>();
             ExecutorService executor = Executors.newFixedThreadPool(10);
