@@ -1,6 +1,6 @@
 ## API Endpoint Tester
 
-A simple way to test a multiidude of API endpoints. 
+A simple way to test a multitude of API endpoints. 
 
 ### Features:
 * Organzation of endpoint data, allowing the testing of groups of endpoints
