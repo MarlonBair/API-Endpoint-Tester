@@ -1,4 +1,5 @@
-import Monitor from "monitor-react/src/utils/monitor";
+import { rateLimitDuration } from "../data/apiData";
+import { rateLimitSize } from "../data/apiData";
 
 const fetchAllData = async (request, setStatusData, setLoading) => {
   setLoading(true);
@@ -9,7 +10,11 @@ const fetchAllData = async (request, setStatusData, setLoading) => {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(request),
+      body: {
+        'requests': JSON.stringify(request),
+        'rateLimitSize': rateLimitSize,
+        'rateLimitDuration': rateLimitDuration
+      }
     });
 
     const result = await response.json();

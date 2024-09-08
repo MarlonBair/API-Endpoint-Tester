@@ -1,3 +1,6 @@
+const rateLimitDuration = 10000;
+const rateLimitSize = 10;
+
 const apiData = {
   "category1": {
     "endpoint1": {
@@ -92,3 +95,4 @@ const apiData = {
 };
 
 export default apiData;
+export {rateLimitDuration, rateLimitSize};
