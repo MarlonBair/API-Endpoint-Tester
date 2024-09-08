@@ -26,4 +26,5 @@ public class ApiRequest {
     public void setBody(Map<String, Object> body) {
         this.body = body;
     }
+    
 }
